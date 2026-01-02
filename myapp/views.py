@@ -22,7 +22,8 @@ def projects(request):
         'projects' : proy
     })
 
-def tasks(request, id):
-    tarea = Tasks.objects.get(id=id)
-    return HttpResponse("<h1>Tarea:</h1>" \
-    "<p>%s</p>" % tarea.title)
+def tasks(request):
+    tareas = Tasks.objects.all()
+    return render(request, 'tasks.html',{
+        'Tareas': tareas
+    })

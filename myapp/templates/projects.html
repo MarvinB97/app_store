@@ -1,5 +1,9 @@
 <h1>Projects</h1>
 
-<p>
-    {{projects}}
-</p>
+<ol>
+    {% for proj in projects%}
+        <li><strong>{{proj.name}}</strong>
+            <p>descripción: {{proj.description}}</p>
+        </li>
+    {% endfor %}
+</ol>

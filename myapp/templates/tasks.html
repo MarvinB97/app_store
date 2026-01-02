@@ -1,0 +1,10 @@
+<h1>Tasks</h1>
+
+<ol>
+    {% for task in Tareas%}
+        <li><strong>{{task.title}}</strong>
+            <p>descripción: {{task.description}}</p>
+            <small>Proyecto: {{task.project}}</small>
+        </li>
+    {% endfor %}
+</ol>
