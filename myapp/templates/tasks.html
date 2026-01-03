@@ -2,9 +2,17 @@
 
 <ol>
     {% for task in Tareas%}
-        <li><strong>{{task.title}}</strong>
+        <li>
+            <strong>
+                {% if task.done == False %} ⏰ {% else %} ✅ {% endif %} 
+                {{task.title}}
+            </strong>
+            
             <p>descripción: {{task.description}}</p>
             <small>Proyecto: {{task.project}}</small>
+            <hr/>
+            <button> 🗑 Delete </button>
+            <button> ✅ Done </button>
         </li>
     {% endfor %}
 </ol>
